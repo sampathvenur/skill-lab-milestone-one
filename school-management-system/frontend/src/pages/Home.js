@@ -1,12 +1,14 @@
-// src/pages/Home.js
 import React from 'react';
+import MainLayout from '../components/MainLayout';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the School Management System!</p>
-    </div>
+    <MainLayout>
+      <div className="text-center mt-5">
+        <h1>Welcome to the School Management System!</h1>
+        <p>Your one-stop solution for managing all school-related activities.</p>
+      </div>
+    </MainLayout>
   );
 };
 

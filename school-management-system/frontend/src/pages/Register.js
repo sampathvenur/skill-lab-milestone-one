@@ -62,7 +62,7 @@ const Register = () => {
             <option value="admin">Admin</option>
           </select>
         </div>
-        {/* Add role-specific fields based on the selected role */}
+        {}
         <button type="submit" className="btn btn-primary">Register</button>
       </form>
     </div>

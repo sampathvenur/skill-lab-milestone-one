@@ -1,12 +1,14 @@
-// src/pages/Dashboard.js
 import React from 'react';
+import MainLayout from '../components/MainLayout';
 
-const Dashboard = () => {
+const Dashboard = ({ role }) => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome to your dashboard!</p>
-    </div>
+    <MainLayout>
+      <div className="text-center mt-5">
+        <h1>{role} Dashboard</h1>
+        <p>Welcome to your dashboard. Here you can manage your activities.</p>
+      </div>
+    </MainLayout>
   );
 };
 
