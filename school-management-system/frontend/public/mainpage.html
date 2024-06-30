@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        .sidebar ul li {
+            width: 100%;
+            padding: 15px;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="/school-management-system/frontend/public/images/Sayhadri_logo.jpg" alt="Logo">
+        <ul>
+            <li onclick="showDashboard()"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+            <li onclick="showClasses()"><i class="fas fa-chalkboard-teacher"></i> Classes</li>
+            <li onclick="showStudents()"><i class="fas fa-user-graduate"></i> Students</li>
+            <li onclick="showTeachers()"><i class="fas fa-user-tie"></i> Teachers</li>
+            <li onclick="showAssignments()"><i class="fas fa-tasks"></i> Assignments</li>
+            <li onclick="showExams()"><i class="fas fa-file-alt"></i> Exams</li>
+            <li onclick="showPerformance()"><i class="fas fa-chart-line"></i> Performance</li>
+            <li onclick="showAttendance()"><i class="fas fa-calendar-check"></i> Attendance</li>
+            <li><i class="fas fa-book"></i> Library</li>
+            <li><i class="fas fa-bullhorn"></i> Announcements</li>
+            <li><i class="fas fa-calendar-alt"></i> Events & Calendar</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+            <li><i class="fas fa-user"></i> Profile</li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <!-- Content will be dynamically injected here -->
+    </div>
+
+    <script>
+        function showDashboard() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Total Classes</h3>
+                        <p>20</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Teachers</h3>
+                        <p>10</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Students</h3>
+                        <p>200</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Subjects</h3>
+                        <p>15</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showClasses() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Class 1</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Class 2</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Class 3</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Class 4</h3>
+                        <p>Some information</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showStudents() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Student 1</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Student 2</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Student 3</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Student 4</h3>
+                        <p>Some information</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showTeachers() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Teacher 1</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Teacher 2</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Teacher 3</h3>
+                        <p>Some information</p>
+                    </div>
+                    <div class="card">
+                        <h3>Teacher 4</h3>
+                        <p>Some information</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showAssignments() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>No Assignments Due</h3>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showExams() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Math Exam</h3>
+                        <p>Date: 2024-07-01</p>
+                    </div>
+                    <div class="card">
+                        <h3>Science Exam</h3>
+                        <p>Date: 2024-07-02</p>
+                    </div>
+                    <div class="card">
+                        <h3>History Exam</h3>
+                        <p>Date: 2024-07-03</p>
+                    </div>
+                    <div class="card">
+                        <h3>English Exam</h3>
+                        <p>Date: 2024-07-04</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showPerformance() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Performance Graph</h3>
+                        <p>Graph Placeholder</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showAttendance() {
+            document.getElementById('content').innerHTML = `
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Student Attendance</h3>
+                        <p>Placeholder</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Show the dashboard by default
+        showDashboard();
+    </script>
+</body>
+</html>
